@@ -1,88 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    <title>Karlos Peluqueria</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Karlos Peluqueria</title>
     <link rel="stylesheet" href="./css/styles.css" />
-</head>
-<body>
+  </head>
 
-    <header>
-        <nav>
-
-        </nav>
+  <body>
+    <!-- Header -->
+    <header class="main-wrapper header">
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li>Sobre mi</li>
+          <li>Servicios</li>
+          <li>Galeria</li>
+          <li>Testimonios</li>
+          <li>Contacto</li>
+        </ul>
+        <select name="language" class="header__select">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+        </select>
+      </nav>
     </header>
 
-    <section id="hero" class="hero">
-        
-        <h1 class="hero__title"> Karlos </h1>
-
-<!-- 
-.hero__title
-.hero__icon
-.hero__subtitle
-.hero__video
--->
-        
+    <!-- Hero -->
+    <section id="hero" class="main-wrapper hero">
+      <div class="hero_header_wrapper">
+        <div class="hero_header_tittle_wrapper">
+          <h1 class="hero__title">Karlos</h1>
+          <img src="./assets/paw_print.svg" alt="huella" class="hero__icon" />
+          <img src="./assets/clover_icon.svg" alt="trebol" class="hero__icon" />
+        </div>
+        <h2 class="hero__subtitle">Peluqueria Canina</h2>
+        <img src="/img/Dog Hero.webp" class="hero__video" "Foto de perro" />
+      </div>
     </section>
 
-    <section id="services" class="services">
-<!-- 
-.services__title
-.services__list
-.services__item
-.services__icon        
--->
+    <!-- Services -->
+    <section id="services" class="main-wrapper services">
+      <div class="services_wrapper">
+        <h1 class="services__title">SERVICIOS</h1>
+        <div class="services_grid">
+          <div class="services_item">
+            <img
+              src="./assets/services_icon.svg"
+              class="services_icon"
+              alt="icono services"
+            />
+            <p class="services__element">Servicios en clínica a domicilio</p>
+          </div>
+          <div class="services_item">
+            <img
+              src="./assets/bath_services_icon.svg"
+              class="services_icon"
+              alt="icono services"
+            />
+            <p class="services__element">Baños</p>
+          </div>
+          <div class="services_item">
+            <img
+              src="./assets/stripping_services_icon.svg"
+              class="services_icon"
+              alt="icono services"
+            />
+            <p class="services__element">Stripping</p>
+          </div>
+          <div class="services_item">
+            <img
+              src="./assets/Cut_services_icon.svg"
+              class="services_icon"
+              alt="icono services"
+            />
+            <p class="services__element">Tijera</p>
+          </div>
+          <div class="services_item">
+            <img
+              src="./assets/Barber_services_icon.svg"
+              class="services_icon"
+              alt="icono services"
+            />
+            <p class="services__element">Corte a máquina</p>
+          </div>
+          <div class="services_item">
+            <img
+              src="./assets/Home_services_icon.svg"
+              class="services_icon"
+              alt="icono services"
+            />
+            <p class="services__element">Alojamiento canino fines de semana</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="gallery" class="gallery">
-
-        <!-- 
-.gallery__title
-.gallery__description
-.gallery__grid
-.gallery__item
-.gallery__media
-.gallery__badge  (el "foto" / "vídeo")        
--->
-
+    <!-- Gallery -->
+    <section id="gallery" class="main-wrapper">
+      <div class="gallery_wrapper">
+        <h2 class="gallery__title">PERROS FELICES, DUEÑOS ENCANTADOS</h2>
+        <p class="gallery__description">
+          Mira algunos de los resultados. Cada corte refleja cariño, paciencia y
+          pasión por los animales.
+        </p>
+      </div>
     </section>
 
-
-    <section id="testimonials" class="testimonials">
-<!-- 
-.testimonials__title
-.testimonials__description
-.testimonials__list
-.testimonials__card
-.testimonials__avatar
-.testimonials__name
-.testimonials__rating
-.testimonials__text        
--->
+    <!-- Testimonials -->
+    <section id="testimonials" class="main-wrapper testimonials">
+      <div class="testimonials_wrapper">
+        <h2 class="testimonials__title">LO QUE DICEN NUESTRO CLIENTES</h2>
+        <p class="testimonials__description">
+          La satisfacción de las familias y sus mascotas es nuestra mejor
+          recompensa.
+        </p>
+        <div class="testimonial_grid">
+          <div class="testimonial-card">
+            <div class="testimonial-card_wrapper">
+              <div class="testimonial-card__inner">
+                <div class="testimonial-card_header">
+                  <img
+                    src="./img/satisfied customer_1.webp"
+                    class="testimonial-card__photo"
+                    alt="foto cliente"
+                  />
+                  <div classgap="flex-col">
+                    <p class="testimonial-card__name">María González</p>
+                    <p class="">La Moraleja</p>
+                  </div>
+                </div>
+                <div class="testimonial-card____rating-wrapper">
+                  <img
+                    src="./assets/start_icon.svg"
+                    class="testimonial__rating-star"
+                    alt="start"
+                  />
+                  <img
+                    src="./assets/start_icon.svg"
+                    class="testimonial__rating-star"
+                    alt="star"
+                  />
+                  <img
+                    src="./assets/start_icon.svg"
+                    class="testimonial__rating-star"
+                    alt="star"
+                  />
+                  <img
+                    src="./assets/start_icon.svg"
+                    class="testimonial__rating-star"
+                    alt="star"
+                  />
+                  <img
+                    src="./assets/start_icon.svg"
+                    class="testimonial__rating-star"
+                    alt="star"
+                  />
+                </div>
+                <p class="testimonial-card__comment">
+                  "¡Increíble servicio! Mi golden retriever siempre regresa
+                  feliz y con un corte perfecto. El servicio a domicilio es
+                  súper cómodo y profesional. Lo recomiendo 100%."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card_wrapper">
+              <div class="testimonial-card__inner">
+                <div class="testimonial-card_header">
+                  <img
+                    src="./img/satisfied customer_1.webp"
+                    class="testimonial-card__photo"
+                    alt="foto cliente"
+                  />
+                  <div classgap="flex-col">
+                    <p class="testimonial-card__name">María González</p>
+                    <p class="">La Moraleja</p>
+                  </div>
+                </div>
+                <div class="testimonial-card____rating-wrapper">
+                  <img
+                    src="./assets/start_icon.svg"
+                    class="testimonial__rating-star"
+                    alt="start"
+                  />
+                  <img
+                    src="./assets/start_icon.svg"
+                    class="testimonial__rating-star"
+                    alt="star"
+                  />
+                  <img
+                    src="./assets/start_icon.svg"
+                    class="testimonial__rating-star"
+                    alt="star"
+                  />
+                  <img
+                    src="./assets/start_icon.svg"
+                    class="testimonial__rating-star"
+                    alt="star"
+                  />
+                  <img
+                    src="./assets/start_icon.svg"
+                    class="testimonial__rating-star"
+                    alt="star"
+                  />
+                </div>
+                <p>
+                  "¡Increíble servicio! Mi golden retriever siempre regresa
+                  feliz y con un corte perfecto. El servicio a domicilio es
+                  súper cómodo y profesional. Lo recomiendo 100%."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card_wrapper">
+              <div class="testimonial-card__inner">
+                <div class="testimonial-card_header">
+                  <img
+                    src="./img/satisfied customer_1.webp"
+                    class="testimonial-card__photo"
+                    alt="foto cliente"
+                  />
+                  <div classgap="flex-col">
+                    <p class="testimonial-card__name">María González</p>
+                    <p class="">La Moraleja</p>
+                  </div>
+                </div>
+                <div class="testimonial-card____rating-wrapper">
+                  <img
+                    src="./assets/start_icon.svg"
+                    class="testimonial__rating-star"
+                    alt="start"
+                  />
+                  <img
+                    src="./assets/start_icon.svg"
+                    class="testimonial__rating-star"
+                    alt="star"
+                  />
+                  <img
+                    src="./assets/start_icon.svg"
+                    class="testimonial__rating-star"
+                    alt="star"
+                  />
+                  <img
+                    src="./assets/start_icon.svg"
+                    class="testimonial__rating-star"
+                    alt="star"
+                  />
+                  <img
+                    src="./assets/start_icon.svg"
+                    class="testimonial__rating-star"
+                    alt="star"
+                  />
+                </div>
+                <p>
+                  "¡Increíble servicio! Mi golden retriever siempre regresa
+                  feliz y con un corte perfecto. El servicio a domicilio es
+                  súper cómodo y profesional. Lo recomiendo 100%."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="contact">
- 
-<!-- 
-.contact__title
-.contact__description
-.contact__options
-.contact__option
-.contact__icon
-.contact__button    
--->        
-
+    <!-- Conctact -->
+    <section id="contact" class="main-wrapper contact">
+      <div class="contact__wrapper">
+        <h2 class="contact__title">CONTÁCTAME FÁCILMENTE</h2>
+        <h3 class="contact__description">
+          Reserva una cita o consulta cualquier duda. Estoy disponible para
+          atenderte por WhatsApp o en la clínica.
+        </h3>
+        <div class="contact__grid">
+          <div class="contact-card__wrapper" id="whatsapp">
+            <div class="contact-card__inner">
+              <div class="contact-card__icon-wrapper">
+                <img
+                  src="./assets/WhatsApp_icon.svg"
+                  class="contact-card__icon"
+                  alt="icono whatsapp"
+                />
+              </div>
+              <h3 class="contact-card__title">WhatsApp</h3>
+              <p class="contact-card__description">
+                La forma más rápida de contactarme
+              </p>
+              <button class="contact-card__button">
+                <span>Enviar mensaje</span>
+                <img
+                  src="./assets/WhatsApp_icon.svg"
+                  alt="icono whatsapp"
+                  class="contact-card__button-icon"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="contact-card__wrapper" id="location">
+            <div class="contact-card__inner">
+              <div class="contact-card__icon-wrapper">
+                <img
+                  src="./assets/Location_icon.svg"
+                  class="contact-card__icon"
+                  alt="icono location"
+                />
+              </div>
+              <h3 class="contact-card__title">Ubicación</h3>
+              <p class="contact-card__description">Clínica veterinaria</p>
+              <button class="contact-card__button">
+                <span>Clínica veterinaria</span>
+                <img
+                  src="./assets/Google Maps_icon.svg"
+                  alt="icono google maps"
+                  class="contact-card__button-icon"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <footer>
-
-    </footer>
-
-
-    
-</body>
+    <!-- footer -->
+    <footer class="main-wrapper"></footer>
+  </body>
 </html>
