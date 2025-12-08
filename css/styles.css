@@ -208,7 +208,7 @@ body {
   flex-direction: column;
   text-align: center;
   max-width: var(--max-width);
-  margin-bottom: 6rem;
+  margin: 6rem 10rem;
 }
 
 .testimonials__title {
@@ -228,8 +228,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 7rem;
-  max-width: var(--content-witdh);
-  margin: 0 auto;
+  width: 100%;
 }
 
 .testimonial-card_wrapper {
@@ -287,7 +286,7 @@ body {
   flex-direction: column;
   text-align: center;
   max-width: var(--max-width);
-  margin-bottom: 6rem;
+  margin: 6rem 10rem;
 }
 
 .contact__title {
@@ -307,8 +306,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 7.5rem;
-  max-width: var(--content-witdh);
-  margin: 0 auto;
+  width: 100%;
 }
 
 .contact-card__wrapper {
@@ -362,4 +360,27 @@ body {
 .contact-card__button-icon {
   height: 3rem;
   width: 3rem;
+}
+
+/* -----------------------------------------------
+   10. Footer
+----------------------------------------------- */
+
+.footer_wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--max-width);
+  margin: 4rem 10rem;
+}
+
+.footer__inner {
+  display: flex;
+  background: #418e5b;
+  border-radius: 30px;
+  padding: 3.6rem 35.6rem;
+  justify-content: center;
+}
+
+.footer__title {
+  color: white;
 }
