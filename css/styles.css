@@ -51,7 +51,7 @@ img {
 }
 
 body {
-  font-family: (var(--primary-font));
+  font-family: var(--primary-font);
   font-size: 2rem;
 }
 
@@ -203,7 +203,7 @@ body {
    08. Testimonials
 ----------------------------------------------- */
 
-.testimonials_wrapper {
+.testimonials__wrapper {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -224,14 +224,14 @@ body {
   margin-bottom: 6rem;
 }
 
-.testimonial_grid {
+.testimonial__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 7rem;
   width: 100%;
 }
 
-.testimonial-card_wrapper {
+.testimonial-card__wrapper {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
 }
@@ -243,7 +243,7 @@ body {
   padding: 5rem 5rem;
 }
 
-.testimonial-card_header {
+.testimonial-card__header {
   display: flex;
   gap: 1.5rem;
   align-items: center;
@@ -261,7 +261,7 @@ body {
   font-size: 1.7rem;
 }
 
-.testimonial-card____rating-wrapper {
+.testimonial-card__rating-wrapper {
   display: flex;
   gap: 0.7rem;
   margin: 0 auto;
