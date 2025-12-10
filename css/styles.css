@@ -10,6 +10,8 @@
    08. Testimonials
    09. Contact
    10. Footer
+   11. Media Querys
+
 -----------------------------------------------------*/
 
 /* -----------------------------------------------
@@ -19,6 +21,7 @@
 html {
   /* 1 rem = 10px */
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 /* -----------------------------------------------
@@ -93,6 +96,22 @@ body {
   list-style-type: none;
 }
 
+.header__list a {
+  text-decoration: none;
+}
+
+.header__mobile-list {
+  display: none;
+  gap: 1.5rem;
+  list-style-type: none;
+}
+
+.header__mobile-list li {
+  font-size: 1.6rem;
+}
+
+/*  Mobile Menu */
+
 /* -----------------------------------------------
    05. Hero
 ----------------------------------------------- */
@@ -107,6 +126,7 @@ body {
 .hero_header_tittle_wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .hero__title {
@@ -207,7 +227,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  max-width: var(--max-width);
+  /* max-width: var(--max-width); */
   margin: 6rem 10rem;
 }
 
@@ -357,9 +377,30 @@ body {
   border: none;
 }
 
+.contact-card__text {
+  color: white;
+}
+
 .contact-card__button-icon {
   height: 3rem;
   width: 3rem;
+}
+
+/* Button scroll to up  */
+.btn-scroll-to-top {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  margin-right: 24px;
+  display: none;
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
 }
 
 /* -----------------------------------------------
@@ -383,4 +424,90 @@ body {
 
 .footer__title {
   color: white;
+}
+
+/* -----------------------------------------------
+   11. Media Querys
+----------------------------------------------- */
+
+/* smaller destoks */
+@media (max-width: 82em) {
+}
+
+/* Bellow 1200px Land Scape tablets */
+@media (max-width: 75em) {
+}
+
+/* Bellow 944px  tablets */
+@media (max-width: 59em) {
+}
+
+/* Bellow 700px  Small tablets */
+@media (max-width: 44em) {
+  .header__list {
+    display: none;
+  }
+  .header__mobile-list {
+    display: flex;
+  }
+
+  .header {
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem 4rem;
+  }
+
+  .hero__title {
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .hero__icon {
+    height: 4.8rem;
+    width: 4.8rem;
+  }
+
+  .services__title {
+    font-size: 6rem;
+  }
+
+  .services_grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem 3rem;
+  }
+
+  .services_wrapper {
+    margin: 3rem 7.5rem;
+  }
+
+  .testimonials__wrapper {
+    margin: 3rem 4.2rem;
+  }
+
+  .testimonial__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contact__grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4rem;
+    justify-content: center;
+  }
+
+  .footer_wrapper {
+    margin: 3rem 4rem;
+  }
+
+  .footer__inner {
+    padding: 3rem 4.4rem;
+  }
+
+  .footer__title {
+    font-size: 1.6rem;
+  }
+}
+
+/* Bellow 544px  phones */
+@media (max-width: 34em) {
 }
