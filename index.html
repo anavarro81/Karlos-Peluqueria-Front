@@ -20,11 +20,18 @@
       <nav class="header__nav">
         <ul class="header__list">
           <li>Sobre mi</li>
-          <li>Servicios</li>
-          <li>Galeria</li>
-          <li>Testimonios</li>
-          <li>Contacto</li>
+          <li><a href="#services"> Servicios </a></li>
+          <li><a href="#gallery"> Galeria </a></li>
+          <li><a href="#testimonials"> Testimonio </a></li>
+          <li><a href="#testimonials"> Testimonio </a></li>
+          <li><a href="#contact"> Contacto </a></li>
         </ul>
+        <ul class="header__mobile-list">
+          <li><a href="#gallery"> Galeria </a></li>
+          <li><a href="#testimonials"> Testimonio </a></li>
+          <li><a href="#contact"> Contacto </a></li>
+        </ul>
+
         <select name="language" class="header__select">
           <option value="es">Español</option>
           <option value="en">English</option>
@@ -39,7 +46,7 @@
         <div class="hero_header_tittle_wrapper">
           <h1 class="hero__title">Karlos</h1>
           <img src="./assets/paw_print.svg" alt="huella" class="hero__icon" />
-          <img src="./assets/clover.webp" alt="trebol" class="hero__icon" />
+          <img src="./assets/clover_icon.svg" alt="trebol" class="hero__icon" />
         </div>
         <h2 class="hero__subtitle">Peluqueria Canina</h2>
         <img src="/img/Dog Hero.webp" class="hero__video" alt="Foto de perro" />
@@ -47,7 +54,7 @@
     </section>
 
     <!-- Services -->
-    <section id="services" class="main-wrapper services">
+    <section id="services" class="main-wrapper">
       <div class="services_wrapper">
         <h1 class="services__title">SERVICIOS</h1>
         <div class="services_grid">
@@ -276,7 +283,7 @@
 
     <!-- Conctact -->
     <!-- <section id="contact" class="main-wrapper"> -->
-    <div class="contact__wrapper">
+    <div id="contact" class="contact__wrapper">
       <h2 class="contact__title">CONTÁCTAME FÁCILMENTE</h2>
       <h3 class="contact__description">
         Reserva una cita o consulta cualquier duda. Estoy disponible para
@@ -297,7 +304,7 @@
               La forma más rápida de contactarme
             </p>
             <button class="contact-card__button">
-              <span>Enviar mensaje</span>
+              <span class="contact-card__text">Enviar mensaje</span>
               <img
                 src="./assets/WhatsApp_icon.svg"
                 alt="icono whatsapp"
@@ -318,7 +325,7 @@
             <h3 class="contact-card__title">Ubicación</h3>
             <p class="contact-card__description">Clínica veterinaria</p>
             <button class="contact-card__button">
-              <span>Clínica veterinaria</span>
+              <span class="contact-card__text">Clínica veterinaria</span>
               <img
                 src="./assets/Google Maps_icon.svg"
                 alt="icono google maps"
@@ -335,11 +342,30 @@
     <footer class="">
       <div class="footer_wrapper">
         <div class="footer__inner">
-          <p class="footer__title">
-            © 2025 Peluquería Canina | Todos los derechos reservados.
-          </p>
+          <p class="footer__title">© Karlos Peluquería Canina</p>
         </div>
       </div>
     </footer>
+
+    <button class="btn-scroll-to-top" id="btn-scroll-to-top">
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="octicon octicon-chevron-up"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        display="inline-block"
+        overflow="visible"
+        style="vertical-align: text-bottom"
+      >
+        <path
+          d="M3.22 10.53a.749.749 0 0 1 0-1.06l4.25-4.25a.749.749 0 0 1 1.06 0l4.25 4.25a.749.749 0 1 1-1.06 1.06L8 6.811 4.28 10.53a.749.749 0 0 1-1.06 0Z"
+        ></path>
+      </svg>
+    </button>
+
+    <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>
