@@ -31,17 +31,20 @@
           <li><a href="#contact"> Contacto </a></li>
         </ul>
 
-        <select name="language" class="header__select">
-          <option value="es">Español</option>
-          <option value="en">English</option>
-          <option value="fr">Français</option>
+        <select>
+          <button>
+            <selectedcontent></selectedcontent>
+          </button>
+          <option value="Right">Español</option>
+          <option value="Left">Ingles</option>
+          <option value="None">Frances</option>
         </select>
       </nav>
     </header>
 
-    <!-- Hero -->
-    <section id="hero" class="main-wrapper hero">
-      <div class="hero_header_wrapper">
+    <main class="main-wrapper main-content">
+      <!-- Hero -->
+      <section id="hero" class="hero_header_wrapper">
         <div class="hero_header_tittle_wrapper">
           <h1 class="hero__title">Karlos</h1>
           <img src="./assets/paw_print.svg" alt="huella" class="hero__icon" />
@@ -49,12 +52,10 @@
         </div>
         <h2 class="hero__subtitle">Peluqueria Canina</h2>
         <img src="/img/Dog Hero.webp" class="hero__video" alt="perro" />
-      </div>
-    </section>
+      </section>
 
-    <!-- Services -->
-    <section id="services" class="main-wrapper">
-      <div class="services_wrapper">
+      <!-- Services -->
+      <section id="services" class="services_wrapper">
         <h1 class="services__title">SERVICIOS</h1>
         <div class="services_grid">
           <div class="services_item">
@@ -106,23 +107,503 @@
             <p class="services__element">Alojamiento canino fines de semana</p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Gallery -->
-    <section id="gallery" class="main-wrapper">
-      <div class="gallery_wrapper">
-        <h2 class="gallery__title">PERROS FELICES, DUEÑOS ENCANTADOS</h2>
-        <p class="gallery__description">
-          Mira algunos de los resultados. Cada corte refleja cariño, paciencia y
-          pasión por los animales.
-        </p>
-      </div>
-    </section>
+      <!-- Gallery -->
+      <section id="gallery" class="gallery_wrapper inner-container">
+        <div class="gallery__description">
+          <h2 class="gallery__title">PERROS FELICES, DUEÑOS ENCANTADOS</h2>
+          <p class="gallery__description">
+            Mira algunos de los resultados. Cada corte refleja cariño, paciencia
+            y pasión por los animales.
+          </p>
+        </div>
+        <div class="gallery__images">
+          <div class="gallery__image--item">
+            <img
+              src="./img/Galley_Dog_image_small_1.webp"
+              class="gallery__image"
+              alt="perro peluqueria"
+            />
+            <div class="gallery__image--icon">
+              <svg
+                width="61"
+                height="61"
+                viewBox="0 0 61 61"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect width="61" height="61" rx="30.5" fill="#418E5B" />
+                <rect
+                  x="10"
+                  y="10.5"
+                  width="40"
+                  height="40"
+                  fill="url(#pattern0_170_97)"
+                />
+                <defs>
+                  <pattern
+                    id="pattern0_170_97"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_170_97"
+                      transform="scale(0.0111111)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_170_97"
+                    width="90"
+                    height="90"
+                    preserveAspectRatio="none"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjElEQVR4nO3cPW4TQRiH8ZX4CBIWLQUUnABSOdByC+5AoKBIGR8hH1eggnsEkJAAiZYqlDQoSITqQYsmlnF2xjPj17M72f9Pcue8nn0ymWxSbNOIiIiIiIiIiIiISAhwC3gJfAB+IRfaFu+BF8DWupHvA1/mo8Xnc9tqnZ2syGmx03e2Oy4kzW5O6PZMljTvckKfJX6IwFlOaMmg0IUodCEKHfYbOACmwG332gEOgXMSKLTfKfAw0OGRe08UhfbvZG/kpdhRO1uhux0k9DgigkJ3myb0eEwEhe42SegxocfQe4wn9J3eQrv3zajXtIqjY+G9tcY+TOhx3HvoimOft7duES22gT+DCF1x7NNQbBf5e+ywIqEr39lH7hyeuNcTd1xE7eTiod3X1n43kq1o6DHHbkqHHmvspo/QhrH3a/mm9RbaIPa+8Tft6oZeI9I8ci2xm1SbGEpapEuRa4g9iNAJ99lfgetNwFDv10Nr9l2I/dC0HfkWuNEEDHFnh9bruwj7ocONbXZXE1qr7wLsh+b9+L8BrhnM8ZkZzfkntE7f4u2Hdoi8uD2jOd7Ia86ZW7XOroXbD/WI+LH9ZjRn43c1Metc/jD7oQErdtIPozmLdzUbOY5i17n4QfZDVwhc3GujORs/jlLWefEh9kMjAK+W/gf8EbibMWdmdBwlxa4mdAt4ADwDnq76w2VAx1F9oSs+jsYb2vg4UugSx5FCF6LQhSh0IQpdiEIXotCFKHQhCl2IQhei0Fc9tFym0IUo9IBD68Eo6X7mhNajfgo96qd9npukeZ4Tess9YkzifAJuJodeeMCgYsdFvpcVeWln77bnj35B/qdtcdIeF9k7WURERERERERERKQZjb/rDdCaunHJHQAAAABJRU5ErkJggg=="
+                  />
+                </defs>
+              </svg>
+            </div>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="main-wrapper">
-      <div class="testimonials__wrapper">
+            <button class="gallery__image--button">
+              <span>Foto</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect width="20" height="20" fill="url(#pattern0_170_96)" />
+                <defs>
+                  <pattern
+                    id="pattern0_170_96"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_170_96"
+                      transform="scale(0.0111111)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_170_96"
+                    width="90"
+                    height="90"
+                    preserveAspectRatio="none"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjElEQVR4nO3cPW4TQRiH8ZX4CBIWLQUUnABSOdByC+5AoKBIGR8hH1eggnsEkJAAiZYqlDQoSITqQYsmlnF2xjPj17M72f9Pcue8nn0ymWxSbNOIiIiIiIiIiIiISAhwC3gJfAB+IRfaFu+BF8DWupHvA1/mo8Xnc9tqnZ2syGmx03e2Oy4kzW5O6PZMljTvckKfJX6IwFlOaMmg0IUodCEKHfYbOACmwG332gEOgXMSKLTfKfAw0OGRe08UhfbvZG/kpdhRO1uhux0k9DgigkJ3myb0eEwEhe42SegxocfQe4wn9J3eQrv3zajXtIqjY+G9tcY+TOhx3HvoimOft7duES22gT+DCF1x7NNQbBf5e+ywIqEr39lH7hyeuNcTd1xE7eTiod3X1n43kq1o6DHHbkqHHmvspo/QhrH3a/mm9RbaIPa+8Tft6oZeI9I8ci2xm1SbGEpapEuRa4g9iNAJ99lfgetNwFDv10Nr9l2I/dC0HfkWuNEEDHFnh9bruwj7ocONbXZXE1qr7wLsh+b9+L8BrhnM8ZkZzfkntE7f4u2Hdoi8uD2jOd7Ia86ZW7XOroXbD/WI+LH9ZjRn43c1Metc/jD7oQErdtIPozmLdzUbOY5i17n4QfZDVwhc3GujORs/jlLWefEh9kMjAK+W/gf8EbibMWdmdBwlxa4mdAt4ADwDnq76w2VAx1F9oSs+jsYb2vg4UugSx5FCF6LQhSh0IQpdiEIXotCFKHQhCl2IQhei0Fc9tFym0IUo9IBD68Eo6X7mhNajfgo96qd9npukeZ4Tess9YkzifAJuJodeeMCgYsdFvpcVeWln77bnj35B/qdtcdIeF9k7WURERERERERERKQZjb/rDdCaunHJHQAAAABJRU5ErkJggg=="
+                  />
+                </defs>
+              </svg>
+            </button>
+          </div>
+          <div class="gallery__image--item">
+            <img
+              src="./img/Galley_Dog_image_small_2.webp"
+              class="gallery__image"
+              alt="perro peluqueria"
+            />
+            <div class="gallery__image--icon">
+              <svg
+                width="61"
+                height="61"
+                viewBox="0 0 61 61"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect width="61" height="61" rx="30.5" fill="#418E5B" />
+                <rect
+                  x="10"
+                  y="10.5"
+                  width="40"
+                  height="40"
+                  fill="url(#pattern0_170_97)"
+                />
+                <defs>
+                  <pattern
+                    id="pattern0_170_97"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_170_97"
+                      transform="scale(0.0111111)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_170_97"
+                    width="90"
+                    height="90"
+                    preserveAspectRatio="none"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjElEQVR4nO3cPW4TQRiH8ZX4CBIWLQUUnABSOdByC+5AoKBIGR8hH1eggnsEkJAAiZYqlDQoSITqQYsmlnF2xjPj17M72f9Pcue8nn0ymWxSbNOIiIiIiIiIiIiISAhwC3gJfAB+IRfaFu+BF8DWupHvA1/mo8Xnc9tqnZ2syGmx03e2Oy4kzW5O6PZMljTvckKfJX6IwFlOaMmg0IUodCEKHfYbOACmwG332gEOgXMSKLTfKfAw0OGRe08UhfbvZG/kpdhRO1uhux0k9DgigkJ3myb0eEwEhe42SegxocfQe4wn9J3eQrv3zajXtIqjY+G9tcY+TOhx3HvoimOft7duES22gT+DCF1x7NNQbBf5e+ywIqEr39lH7hyeuNcTd1xE7eTiod3X1n43kq1o6DHHbkqHHmvspo/QhrH3a/mm9RbaIPa+8Tft6oZeI9I8ci2xm1SbGEpapEuRa4g9iNAJ99lfgetNwFDv10Nr9l2I/dC0HfkWuNEEDHFnh9bruwj7ocONbXZXE1qr7wLsh+b9+L8BrhnM8ZkZzfkntE7f4u2Hdoi8uD2jOd7Ia86ZW7XOroXbD/WI+LH9ZjRn43c1Metc/jD7oQErdtIPozmLdzUbOY5i17n4QfZDVwhc3GujORs/jlLWefEh9kMjAK+W/gf8EbibMWdmdBwlxa4mdAt4ADwDnq76w2VAx1F9oSs+jsYb2vg4UugSx5FCF6LQhSh0IQpdiEIXotCFKHQhCl2IQhei0Fc9tFym0IUo9IBD68Eo6X7mhNajfgo96qd9npukeZ4Tess9YkzifAJuJodeeMCgYsdFvpcVeWln77bnj35B/qdtcdIeF9k7WURERERERERERKQZjb/rDdCaunHJHQAAAABJRU5ErkJggg=="
+                  />
+                </defs>
+              </svg>
+            </div>
+
+            <button class="gallery__image--button">
+              <span>Foto</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect width="20" height="20" fill="url(#pattern0_170_96)" />
+                <defs>
+                  <pattern
+                    id="pattern0_170_96"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_170_96"
+                      transform="scale(0.0111111)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_170_96"
+                    width="90"
+                    height="90"
+                    preserveAspectRatio="none"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjElEQVR4nO3cPW4TQRiH8ZX4CBIWLQUUnABSOdByC+5AoKBIGR8hH1eggnsEkJAAiZYqlDQoSITqQYsmlnF2xjPj17M72f9Pcue8nn0ymWxSbNOIiIiIiIiIiIiISAhwC3gJfAB+IRfaFu+BF8DWupHvA1/mo8Xnc9tqnZ2syGmx03e2Oy4kzW5O6PZMljTvckKfJX6IwFlOaMmg0IUodCEKHfYbOACmwG332gEOgXMSKLTfKfAw0OGRe08UhfbvZG/kpdhRO1uhux0k9DgigkJ3myb0eEwEhe42SegxocfQe4wn9J3eQrv3zajXtIqjY+G9tcY+TOhx3HvoimOft7duES22gT+DCF1x7NNQbBf5e+ywIqEr39lH7hyeuNcTd1xE7eTiod3X1n43kq1o6DHHbkqHHmvspo/QhrH3a/mm9RbaIPa+8Tft6oZeI9I8ci2xm1SbGEpapEuRa4g9iNAJ99lfgetNwFDv10Nr9l2I/dC0HfkWuNEEDHFnh9bruwj7ocONbXZXE1qr7wLsh+b9+L8BrhnM8ZkZzfkntE7f4u2Hdoi8uD2jOd7Ia86ZW7XOroXbD/WI+LH9ZjRn43c1Metc/jD7oQErdtIPozmLdzUbOY5i17n4QfZDVwhc3GujORs/jlLWefEh9kMjAK+W/gf8EbibMWdmdBwlxa4mdAt4ADwDnq76w2VAx1F9oSs+jsYb2vg4UugSx5FCF6LQhSh0IQpdiEIXotCFKHQhCl2IQhei0Fc9tFym0IUo9IBD68Eo6X7mhNajfgo96qd9npukeZ4Tess9YkzifAJuJodeeMCgYsdFvpcVeWln77bnj35B/qdtcdIeF9k7WURERERERERERKQZjb/rDdCaunHJHQAAAABJRU5ErkJggg=="
+                  />
+                </defs>
+              </svg>
+            </button>
+          </div>
+          <div class="gallery__image--item">
+            <img
+              src="./img/Galley_Dog_image_small_3.webp"
+              class="gallery__image"
+              alt="perro peluqueria"
+            />
+            <div class="gallery__image--icon">
+              <svg
+                width="61"
+                height="61"
+                viewBox="0 0 61 61"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect width="61" height="61" rx="30.5" fill="#418E5B" />
+                <rect
+                  x="10"
+                  y="10.5"
+                  width="40"
+                  height="40"
+                  fill="url(#pattern0_170_97)"
+                />
+                <defs>
+                  <pattern
+                    id="pattern0_170_97"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_170_97"
+                      transform="scale(0.0111111)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_170_97"
+                    width="90"
+                    height="90"
+                    preserveAspectRatio="none"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjElEQVR4nO3cPW4TQRiH8ZX4CBIWLQUUnABSOdByC+5AoKBIGR8hH1eggnsEkJAAiZYqlDQoSITqQYsmlnF2xjPj17M72f9Pcue8nn0ymWxSbNOIiIiIiIiIiIiISAhwC3gJfAB+IRfaFu+BF8DWupHvA1/mo8Xnc9tqnZ2syGmx03e2Oy4kzW5O6PZMljTvckKfJX6IwFlOaMmg0IUodCEKHfYbOACmwG332gEOgXMSKLTfKfAw0OGRe08UhfbvZG/kpdhRO1uhux0k9DgigkJ3myb0eEwEhe42SegxocfQe4wn9J3eQrv3zajXtIqjY+G9tcY+TOhx3HvoimOft7duES22gT+DCF1x7NNQbBf5e+ywIqEr39lH7hyeuNcTd1xE7eTiod3X1n43kq1o6DHHbkqHHmvspo/QhrH3a/mm9RbaIPa+8Tft6oZeI9I8ci2xm1SbGEpapEuRa4g9iNAJ99lfgetNwFDv10Nr9l2I/dC0HfkWuNEEDHFnh9bruwj7ocONbXZXE1qr7wLsh+b9+L8BrhnM8ZkZzfkntE7f4u2Hdoi8uD2jOd7Ia86ZW7XOroXbD/WI+LH9ZjRn43c1Metc/jD7oQErdtIPozmLdzUbOY5i17n4QfZDVwhc3GujORs/jlLWefEh9kMjAK+W/gf8EbibMWdmdBwlxa4mdAt4ADwDnq76w2VAx1F9oSs+jsYb2vg4UugSx5FCF6LQhSh0IQpdiEIXotCFKHQhCl2IQhei0Fc9tFym0IUo9IBD68Eo6X7mhNajfgo96qd9npukeZ4Tess9YkzifAJuJodeeMCgYsdFvpcVeWln77bnj35B/qdtcdIeF9k7WURERERERERERKQZjb/rDdCaunHJHQAAAABJRU5ErkJggg=="
+                  />
+                </defs>
+              </svg>
+            </div>
+
+            <button class="gallery__image--button">
+              <span>Foto</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect width="20" height="20" fill="url(#pattern0_170_96)" />
+                <defs>
+                  <pattern
+                    id="pattern0_170_96"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_170_96"
+                      transform="scale(0.0111111)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_170_96"
+                    width="90"
+                    height="90"
+                    preserveAspectRatio="none"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjElEQVR4nO3cPW4TQRiH8ZX4CBIWLQUUnABSOdByC+5AoKBIGR8hH1eggnsEkJAAiZYqlDQoSITqQYsmlnF2xjPj17M72f9Pcue8nn0ymWxSbNOIiIiIiIiIiIiISAhwC3gJfAB+IRfaFu+BF8DWupHvA1/mo8Xnc9tqnZ2syGmx03e2Oy4kzW5O6PZMljTvckKfJX6IwFlOaMmg0IUodCEKHfYbOACmwG332gEOgXMSKLTfKfAw0OGRe08UhfbvZG/kpdhRO1uhux0k9DgigkJ3myb0eEwEhe42SegxocfQe4wn9J3eQrv3zajXtIqjY+G9tcY+TOhx3HvoimOft7duES22gT+DCF1x7NNQbBf5e+ywIqEr39lH7hyeuNcTd1xE7eTiod3X1n43kq1o6DHHbkqHHmvspo/QhrH3a/mm9RbaIPa+8Tft6oZeI9I8ci2xm1SbGEpapEuRa4g9iNAJ99lfgetNwFDv10Nr9l2I/dC0HfkWuNEEDHFnh9bruwj7ocONbXZXE1qr7wLsh+b9+L8BrhnM8ZkZzfkntE7f4u2Hdoi8uD2jOd7Ia86ZW7XOroXbD/WI+LH9ZjRn43c1Metc/jD7oQErdtIPozmLdzUbOY5i17n4QfZDVwhc3GujORs/jlLWefEh9kMjAK+W/gf8EbibMWdmdBwlxa4mdAt4ADwDnq76w2VAx1F9oSs+jsYb2vg4UugSx5FCF6LQhSh0IQpdiEIXotCFKHQhCl2IQhei0Fc9tFym0IUo9IBD68Eo6X7mhNajfgo96qd9npukeZ4Tess9YkzifAJuJodeeMCgYsdFvpcVeWln77bnj35B/qdtcdIeF9k7WURERERERERERKQZjb/rDdCaunHJHQAAAABJRU5ErkJggg=="
+                  />
+                </defs>
+              </svg>
+            </button>
+          </div>
+          <div class="gallery__image--item">
+            <img
+              src="./img/Galley_Dog_image_small_4.webp"
+              class="gallery__image"
+              alt="perro peluqueria"
+            />
+            <div class="gallery__image--icon">
+              <svg
+                width="61"
+                height="61"
+                viewBox="0 0 61 61"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect width="61" height="61" rx="30.5" fill="#418E5B" />
+                <rect
+                  x="10"
+                  y="10.5"
+                  width="40"
+                  height="40"
+                  fill="url(#pattern0_170_97)"
+                />
+                <defs>
+                  <pattern
+                    id="pattern0_170_97"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_170_97"
+                      transform="scale(0.0111111)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_170_97"
+                    width="90"
+                    height="90"
+                    preserveAspectRatio="none"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjElEQVR4nO3cPW4TQRiH8ZX4CBIWLQUUnABSOdByC+5AoKBIGR8hH1eggnsEkJAAiZYqlDQoSITqQYsmlnF2xjPj17M72f9Pcue8nn0ymWxSbNOIiIiIiIiIiIiISAhwC3gJfAB+IRfaFu+BF8DWupHvA1/mo8Xnc9tqnZ2syGmx03e2Oy4kzW5O6PZMljTvckKfJX6IwFlOaMmg0IUodCEKHfYbOACmwG332gEOgXMSKLTfKfAw0OGRe08UhfbvZG/kpdhRO1uhux0k9DgigkJ3myb0eEwEhe42SegxocfQe4wn9J3eQrv3zajXtIqjY+G9tcY+TOhx3HvoimOft7duES22gT+DCF1x7NNQbBf5e+ywIqEr39lH7hyeuNcTd1xE7eTiod3X1n43kq1o6DHHbkqHHmvspo/QhrH3a/mm9RbaIPa+8Tft6oZeI9I8ci2xm1SbGEpapEuRa4g9iNAJ99lfgetNwFDv10Nr9l2I/dC0HfkWuNEEDHFnh9bruwj7ocONbXZXE1qr7wLsh+b9+L8BrhnM8ZkZzfkntE7f4u2Hdoi8uD2jOd7Ia86ZW7XOroXbD/WI+LH9ZjRn43c1Metc/jD7oQErdtIPozmLdzUbOY5i17n4QfZDVwhc3GujORs/jlLWefEh9kMjAK+W/gf8EbibMWdmdBwlxa4mdAt4ADwDnq76w2VAx1F9oSs+jsYb2vg4UugSx5FCF6LQhSh0IQpdiEIXotCFKHQhCl2IQhei0Fc9tFym0IUo9IBD68Eo6X7mhNajfgo96qd9npukeZ4Tess9YkzifAJuJodeeMCgYsdFvpcVeWln77bnj35B/qdtcdIeF9k7WURERERERERERKQZjb/rDdCaunHJHQAAAABJRU5ErkJggg=="
+                  />
+                </defs>
+              </svg>
+            </div>
+
+            <button class="gallery__image--button">
+              <span>Foto</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect width="20" height="20" fill="url(#pattern0_170_96)" />
+                <defs>
+                  <pattern
+                    id="pattern0_170_96"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_170_96"
+                      transform="scale(0.0111111)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_170_96"
+                    width="90"
+                    height="90"
+                    preserveAspectRatio="none"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjElEQVR4nO3cPW4TQRiH8ZX4CBIWLQUUnABSOdByC+5AoKBIGR8hH1eggnsEkJAAiZYqlDQoSITqQYsmlnF2xjPj17M72f9Pcue8nn0ymWxSbNOIiIiIiIiIiIiISAhwC3gJfAB+IRfaFu+BF8DWupHvA1/mo8Xnc9tqnZ2syGmx03e2Oy4kzW5O6PZMljTvckKfJX6IwFlOaMmg0IUodCEKHfYbOACmwG332gEOgXMSKLTfKfAw0OGRe08UhfbvZG/kpdhRO1uhux0k9DgigkJ3myb0eEwEhe42SegxocfQe4wn9J3eQrv3zajXtIqjY+G9tcY+TOhx3HvoimOft7duES22gT+DCF1x7NNQbBf5e+ywIqEr39lH7hyeuNcTd1xE7eTiod3X1n43kq1o6DHHbkqHHmvspo/QhrH3a/mm9RbaIPa+8Tft6oZeI9I8ci2xm1SbGEpapEuRa4g9iNAJ99lfgetNwFDv10Nr9l2I/dC0HfkWuNEEDHFnh9bruwj7ocONbXZXE1qr7wLsh+b9+L8BrhnM8ZkZzfkntE7f4u2Hdoi8uD2jOd7Ia86ZW7XOroXbD/WI+LH9ZjRn43c1Metc/jD7oQErdtIPozmLdzUbOY5i17n4QfZDVwhc3GujORs/jlLWefEh9kMjAK+W/gf8EbibMWdmdBwlxa4mdAt4ADwDnq76w2VAx1F9oSs+jsYb2vg4UugSx5FCF6LQhSh0IQpdiEIXotCFKHQhCl2IQhei0Fc9tFym0IUo9IBD68Eo6X7mhNajfgo96qd9npukeZ4Tess9YkzifAJuJodeeMCgYsdFvpcVeWln77bnj35B/qdtcdIeF9k7WURERERERERERKQZjb/rDdCaunHJHQAAAABJRU5ErkJggg=="
+                  />
+                </defs>
+              </svg>
+            </button>
+          </div>
+          <div class="gallery__image--item">
+            <img
+              src="./img/Galley_Dog_image_small_5.webp"
+              class="gallery__image"
+              alt="perro peluqueria"
+            />
+            <div class="gallery__image--icon">
+              <svg
+                width="61"
+                height="61"
+                viewBox="0 0 61 61"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect width="61" height="61" rx="30.5" fill="#418E5B" />
+                <rect
+                  x="10"
+                  y="10.5"
+                  width="40"
+                  height="40"
+                  fill="url(#pattern0_170_97)"
+                />
+                <defs>
+                  <pattern
+                    id="pattern0_170_97"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_170_97"
+                      transform="scale(0.0111111)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_170_97"
+                    width="90"
+                    height="90"
+                    preserveAspectRatio="none"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjElEQVR4nO3cPW4TQRiH8ZX4CBIWLQUUnABSOdByC+5AoKBIGR8hH1eggnsEkJAAiZYqlDQoSITqQYsmlnF2xjPj17M72f9Pcue8nn0ymWxSbNOIiIiIiIiIiIiISAhwC3gJfAB+IRfaFu+BF8DWupHvA1/mo8Xnc9tqnZ2syGmx03e2Oy4kzW5O6PZMljTvckKfJX6IwFlOaMmg0IUodCEKHfYbOACmwG332gEOgXMSKLTfKfAw0OGRe08UhfbvZG/kpdhRO1uhux0k9DgigkJ3myb0eEwEhe42SegxocfQe4wn9J3eQrv3zajXtIqjY+G9tcY+TOhx3HvoimOft7duES22gT+DCF1x7NNQbBf5e+ywIqEr39lH7hyeuNcTd1xE7eTiod3X1n43kq1o6DHHbkqHHmvspo/QhrH3a/mm9RbaIPa+8Tft6oZeI9I8ci2xm1SbGEpapEuRa4g9iNAJ99lfgetNwFDv10Nr9l2I/dC0HfkWuNEEDHFnh9bruwj7ocONbXZXE1qr7wLsh+b9+L8BrhnM8ZkZzfkntE7f4u2Hdoi8uD2jOd7Ia86ZW7XOroXbD/WI+LH9ZjRn43c1Metc/jD7oQErdtIPozmLdzUbOY5i17n4QfZDVwhc3GujORs/jlLWefEh9kMjAK+W/gf8EbibMWdmdBwlxa4mdAt4ADwDnq76w2VAx1F9oSs+jsYb2vg4UugSx5FCF6LQhSh0IQpdiEIXotCFKHQhCl2IQhei0Fc9tFym0IUo9IBD68Eo6X7mhNajfgo96qd9npukeZ4Tess9YkzifAJuJodeeMCgYsdFvpcVeWln77bnj35B/qdtcdIeF9k7WURERERERERERKQZjb/rDdCaunHJHQAAAABJRU5ErkJggg=="
+                  />
+                </defs>
+              </svg>
+            </div>
+
+            <button class="gallery__image--button">
+              <span>Foto</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect width="20" height="20" fill="url(#pattern0_170_96)" />
+                <defs>
+                  <pattern
+                    id="pattern0_170_96"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_170_96"
+                      transform="scale(0.0111111)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_170_96"
+                    width="90"
+                    height="90"
+                    preserveAspectRatio="none"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjElEQVR4nO3cPW4TQRiH8ZX4CBIWLQUUnABSOdByC+5AoKBIGR8hH1eggnsEkJAAiZYqlDQoSITqQYsmlnF2xjPj17M72f9Pcue8nn0ymWxSbNOIiIiIiIiIiIiISAhwC3gJfAB+IRfaFu+BF8DWupHvA1/mo8Xnc9tqnZ2syGmx03e2Oy4kzW5O6PZMljTvckKfJX6IwFlOaMmg0IUodCEKHfYbOACmwG332gEOgXMSKLTfKfAw0OGRe08UhfbvZG/kpdhRO1uhux0k9DgigkJ3myb0eEwEhe42SegxocfQe4wn9J3eQrv3zajXtIqjY+G9tcY+TOhx3HvoimOft7duES22gT+DCF1x7NNQbBf5e+ywIqEr39lH7hyeuNcTd1xE7eTiod3X1n43kq1o6DHHbkqHHmvspo/QhrH3a/mm9RbaIPa+8Tft6oZeI9I8ci2xm1SbGEpapEuRa4g9iNAJ99lfgetNwFDv10Nr9l2I/dC0HfkWuNEEDHFnh9bruwj7ocONbXZXE1qr7wLsh+b9+L8BrhnM8ZkZzfkntE7f4u2Hdoi8uD2jOd7Ia86ZW7XOroXbD/WI+LH9ZjRn43c1Metc/jD7oQErdtIPozmLdzUbOY5i17n4QfZDVwhc3GujORs/jlLWefEh9kMjAK+W/gf8EbibMWdmdBwlxa4mdAt4ADwDnq76w2VAx1F9oSs+jsYb2vg4UugSx5FCF6LQhSh0IQpdiEIXotCFKHQhCl2IQhei0Fc9tFym0IUo9IBD68Eo6X7mhNajfgo96qd9npukeZ4Tess9YkzifAJuJodeeMCgYsdFvpcVeWln77bnj35B/qdtcdIeF9k7WURERERERERERKQZjb/rDdCaunHJHQAAAABJRU5ErkJggg=="
+                  />
+                </defs>
+              </svg>
+            </button>
+          </div>
+          <div class="gallery__image--item">
+            <img
+              src="./img/Galley_Dog_image_small_6.webp"
+              class="gallery__image"
+              alt="perro peluqueria"
+            />
+            <div class="gallery__image--icon">
+              <svg
+                width="61"
+                height="61"
+                viewBox="0 0 61 61"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect width="61" height="61" rx="30.5" fill="#418E5B" />
+                <rect
+                  x="10"
+                  y="10.5"
+                  width="40"
+                  height="40"
+                  fill="url(#pattern0_170_97)"
+                />
+                <defs>
+                  <pattern
+                    id="pattern0_170_97"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_170_97"
+                      transform="scale(0.0111111)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_170_97"
+                    width="90"
+                    height="90"
+                    preserveAspectRatio="none"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjElEQVR4nO3cPW4TQRiH8ZX4CBIWLQUUnABSOdByC+5AoKBIGR8hH1eggnsEkJAAiZYqlDQoSITqQYsmlnF2xjPj17M72f9Pcue8nn0ymWxSbNOIiIiIiIiIiIiISAhwC3gJfAB+IRfaFu+BF8DWupHvA1/mo8Xnc9tqnZ2syGmx03e2Oy4kzW5O6PZMljTvckKfJX6IwFlOaMmg0IUodCEKHfYbOACmwG332gEOgXMSKLTfKfAw0OGRe08UhfbvZG/kpdhRO1uhux0k9DgigkJ3myb0eEwEhe42SegxocfQe4wn9J3eQrv3zajXtIqjY+G9tcY+TOhx3HvoimOft7duES22gT+DCF1x7NNQbBf5e+ywIqEr39lH7hyeuNcTd1xE7eTiod3X1n43kq1o6DHHbkqHHmvspo/QhrH3a/mm9RbaIPa+8Tft6oZeI9I8ci2xm1SbGEpapEuRa4g9iNAJ99lfgetNwFDv10Nr9l2I/dC0HfkWuNEEDHFnh9bruwj7ocONbXZXE1qr7wLsh+b9+L8BrhnM8ZkZzfkntE7f4u2Hdoi8uD2jOd7Ia86ZW7XOroXbD/WI+LH9ZjRn43c1Metc/jD7oQErdtIPozmLdzUbOY5i17n4QfZDVwhc3GujORs/jlLWefEh9kMjAK+W/gf8EbibMWdmdBwlxa4mdAt4ADwDnq76w2VAx1F9oSs+jsYb2vg4UugSx5FCF6LQhSh0IQpdiEIXotCFKHQhCl2IQhei0Fc9tFym0IUo9IBD68Eo6X7mhNajfgo96qd9npukeZ4Tess9YkzifAJuJodeeMCgYsdFvpcVeWln77bnj35B/qdtcdIeF9k7WURERERERERERKQZjb/rDdCaunHJHQAAAABJRU5ErkJggg=="
+                  />
+                </defs>
+              </svg>
+            </div>
+
+            <button class="gallery__image--button">
+              <span>Foto</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect width="20" height="20" fill="url(#pattern0_170_96)" />
+                <defs>
+                  <pattern
+                    id="pattern0_170_96"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_170_96"
+                      transform="scale(0.0111111)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_170_96"
+                    width="90"
+                    height="90"
+                    preserveAspectRatio="none"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjElEQVR4nO3cPW4TQRiH8ZX4CBIWLQUUnABSOdByC+5AoKBIGR8hH1eggnsEkJAAiZYqlDQoSITqQYsmlnF2xjPj17M72f9Pcue8nn0ymWxSbNOIiIiIiIiIiIiISAhwC3gJfAB+IRfaFu+BF8DWupHvA1/mo8Xnc9tqnZ2syGmx03e2Oy4kzW5O6PZMljTvckKfJX6IwFlOaMmg0IUodCEKHfYbOACmwG332gEOgXMSKLTfKfAw0OGRe08UhfbvZG/kpdhRO1uhux0k9DgigkJ3myb0eEwEhe42SegxocfQe4wn9J3eQrv3zajXtIqjY+G9tcY+TOhx3HvoimOft7duES22gT+DCF1x7NNQbBf5e+ywIqEr39lH7hyeuNcTd1xE7eTiod3X1n43kq1o6DHHbkqHHmvspo/QhrH3a/mm9RbaIPa+8Tft6oZeI9I8ci2xm1SbGEpapEuRa4g9iNAJ99lfgetNwFDv10Nr9l2I/dC0HfkWuNEEDHFnh9bruwj7ocONbXZXE1qr7wLsh+b9+L8BrhnM8ZkZzfkntE7f4u2Hdoi8uD2jOd7Ia86ZW7XOroXbD/WI+LH9ZjRn43c1Metc/jD7oQErdtIPozmLdzUbOY5i17n4QfZDVwhc3GujORs/jlLWefEh9kMjAK+W/gf8EbibMWdmdBwlxa4mdAt4ADwDnq76w2VAx1F9oSs+jsYb2vg4UugSx5FCF6LQhSh0IQpdiEIXotCFKHQhCl2IQhei0Fc9tFym0IUo9IBD68Eo6X7mhNajfgo96qd9npukeZ4Tess9YkzifAJuJodeeMCgYsdFvpcVeWln77bnj35B/qdtcdIeF9k7WURERERERERERKQZjb/rDdCaunHJHQAAAABJRU5ErkJggg=="
+                  />
+                </defs>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonials" class="testimonials__wrapper inner-container">
         <h2 class="testimonials__title">LO QUE DICEN NUESTRO CLIENTES</h2>
         <p class="testimonials__description">
           La satisfacción de las familias y sus mascotas es nuestra mejor
@@ -277,65 +758,65 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Conctact -->
-    <!-- <section id="contact" class="main-wrapper"> -->
-    <div id="contact" class="contact__wrapper">
-      <h2 class="contact__title">CONTÁCTAME FÁCILMENTE</h2>
-      <h3 class="contact__description">
-        Reserva una cita o consulta cualquier duda. Estoy disponible para
-        atenderte por WhatsApp o en la clínica.
-      </h3>
-      <div class="contact__grid">
-        <div class="contact-card__wrapper" id="whatsapp">
-          <div class="contact-card__inner">
-            <div class="contact-card__icon-wrapper">
-              <img
-                src="./assets/WhatsApp_icon.svg"
-                class="contact-card__icon"
-                alt="icono whatsapp"
-              />
+      <!-- Conctact -->
+      <!-- <section id="contact" class="main-wrapper"> -->
+      <div id="contact" class="contact__wrapper inner-container">
+        <h2 class="contact__title">CONTÁCTAME FÁCILMENTE</h2>
+        <h3 class="contact__description">
+          Reserva una cita o consulta cualquier duda. Estoy disponible para
+          atenderte por WhatsApp o en la clínica.
+        </h3>
+        <div class="contact__grid">
+          <div class="contact-card__wrapper" id="whatsapp">
+            <div class="contact-card__inner">
+              <div class="contact-card__icon-wrapper">
+                <img
+                  src="./assets/WhatsApp_icon.svg"
+                  class="contact-card__icon"
+                  alt="icono whatsapp"
+                />
+              </div>
+              <h3 class="contact-card__title">WhatsApp</h3>
+              <p class="contact-card__description">
+                La forma más rápida de contactarme
+              </p>
+              <button class="contact-card__button">
+                <span class="contact-card__text">Enviar mensaje</span>
+                <img
+                  src="./assets/WhatsApp_icon.svg"
+                  alt="icono whatsapp"
+                  class="contact-card__button-icon"
+                />
+              </button>
             </div>
-            <h3 class="contact-card__title">WhatsApp</h3>
-            <p class="contact-card__description">
-              La forma más rápida de contactarme
-            </p>
-            <button class="contact-card__button">
-              <span class="contact-card__text">Enviar mensaje</span>
-              <img
-                src="./assets/WhatsApp_icon.svg"
-                alt="icono whatsapp"
-                class="contact-card__button-icon"
-              />
-            </button>
           </div>
-        </div>
-        <div class="contact-card__wrapper" id="location">
-          <div class="contact-card__inner">
-            <div class="contact-card__icon-wrapper">
-              <img
-                src="./assets/Location_icon.svg"
-                class="contact-card__icon"
-                alt="icono location"
-              />
+          <div class="contact-card__wrapper" id="location">
+            <div class="contact-card__inner">
+              <div class="contact-card__icon-wrapper">
+                <img
+                  src="./assets/Location_icon.svg"
+                  class="contact-card__icon"
+                  alt="icono location"
+                />
+              </div>
+              <h3 class="contact-card__title">Ubicación</h3>
+              <p class="contact-card__description">Clínica veterinaria</p>
+              <button class="contact-card__button">
+                <span class="contact-card__text">Google Maps</span>
+                <img
+                  src="./assets/Google Maps_icon.svg"
+                  alt="icono google maps"
+                  class="contact-card__button-icon"
+                />
+              </button>
             </div>
-            <h3 class="contact-card__title">Ubicación</h3>
-            <p class="contact-card__description">Clínica veterinaria</p>
-            <button class="contact-card__button">
-              <span class="contact-card__text">Google Maps</span>
-              <img
-                src="./assets/Google Maps_icon.svg"
-                alt="icono google maps"
-                class="contact-card__button-icon"
-              />
-            </button>
           </div>
         </div>
       </div>
-    </div>
-    <!-- </section> -->
+      <!-- </section> -->
+    </main>
 
     <!-- footer -->
     <footer class="">
