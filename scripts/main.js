@@ -1,3 +1,5 @@
+const APP_VERSION = "v0.9.0";
+
 import { scrollUp, toggleScrollButton } from "./scrollMobilePage.js";
 
 const scrollUpButton = document.getElementById("btn-scroll-to-top");
